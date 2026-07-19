@@ -4,11 +4,10 @@
 Chat with LLMs, run tools, and write code — all without leaving your command line.
 It uses under **50 MB** of RAM and is built with Python and [Textual](https://textual.textualize.io/).
 
-```
-> Website: [https://pycode.kozow.com/](https://pycode.kozow.com/)
+> Website: https://pycode.kozow.com/
 > Contact: lu9dce@gmx.com
 > WhatsApp: @hellocodelinux
-```
+
 ---
 
 ## Features
@@ -36,6 +35,9 @@ It uses under **50 MB** of RAM and is built with Python and [Textual](https://te
 - **Error Dialogs** — Friendly error handling for rate limits, auth failures, server errors.
 - **Proxy Support** — Respects `HTTPS_PROXY` / `HTTP_PROXY` environment variables.
 - **Models.dev Integration** — Auto-fetches real context windows from the models.dev catalog (same as opencode).
+- **Message Queue** — Type while the model is processing; messages are queued and sent automatically when the current turn finishes.
+- **Non-blocking Tools** — All tools execute in background threads. The UI stays responsive even during long-running commands or web requests.
+- **Update Notifications** — Automatically checks for new versions on startup and notifies you if an update is available.
 
 ### Available Tools
 
@@ -79,11 +81,14 @@ PyCode ships with a set of built-in tools the LLM can call:
 No dependencies required. Download and run:
 
 ```bash
-curl -L https://shure.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
+curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 ./pycode
 ```
 
-**Source code is not publicly available.** PyCode is distributed as a free binary only. If you have feedback, suggestions, or bug reports, please contact
+**Source code is not publicly available.** PyCode is distributed as a free binary only. If you have feedback, suggestions, or bug reports, please contact:
+
+- **Email:** lu9dce@gmx.com
+- **WhatsApp:** @hellocodelinux
 
 ---
 
@@ -91,7 +96,9 @@ curl -L https://shure.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 
 **PyCode is free to use but NOT open source.** No source code is available. The binary is distributed freely for personal and commercial use.
 
-Feedback, suggestions, and bug reports are welcome
+Feedback, suggestions, and bug reports are welcome:
+- **Email:** lu9dce@gmx.com
+- **WhatsApp:** @hellocodelinux
 
 ---
 
@@ -100,6 +107,6 @@ Feedback, suggestions, and bug reports are welcome
 - **Website:** https://pycode.kozow.com/
 - **Email:** lu9dce@gmx.com
 - **WhatsApp:** @hellocodelinux
-- **Author:** Eduardo Castillo
-  
+- **Author:** Eduardo Castillo (lu9dce@gmx.com)
+
 © 2026 PyCode — Free to use (binary only). Built with ❤️ for terminal lovers.
