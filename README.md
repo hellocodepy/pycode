@@ -4,7 +4,7 @@
 Chat with LLMs, run tools, and write code — all without leaving your command line.
 It uses under **50 MB** of RAM and is built with Python and [Textual](https://textual.textualize.io/).
 
-> Website: [https://shure.kozow.com/](https://pycode.kozow.com/)
+> Website: [https://pycode.kozow.com/](https://pycode.kozow.com/)
 > Contact: lu9dce@gmx.com
 > WhatsApp: @hellocodelinux
 
