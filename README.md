@@ -1,11 +1,12 @@
 # PyCode — Terminal AI Assistant
 
-**PyCode** is a lightweight, open-source terminal assistant (TUI) for developers.
+**PyCode** is a lightweight, free terminal assistant (TUI) for developers.
 Chat with LLMs, run tools, and write code — all without leaving your command line.
 It uses under **50 MB** of RAM and is built with Python and [Textual](https://textual.textualize.io/).
 
 > Website: https://shure.kozow.com/
 > Contact: lu9dce@gmx.com
+> WhatsApp: @hellocodelinux
 
 ---
 
@@ -16,7 +17,24 @@ It uses under **50 MB** of RAM and is built with Python and [Textual](https://te
 - **Built-in Tools** — File editor, code runner, web search, and more. PyCode can execute commands and modify files with your permission. Web search is powered by [Exa](https://exa.ai/) and works freely and at no cost.
 - **Chat Sessions** — Persistent conversations with history. Revisit, rename, or delete sessions anytime.
 - **Beautiful TUI** — Powered by Textual. Rich colors, themes, and a responsive terminal interface.
-- **Open Source** — 100% free and open-source (MIT). Audit the code, contribute, and customize to your needs.
+- **Free to Use** — 100% free to use. No source code available (binary only). Suggestions and feedback welcome via email (lu9dce@gmx.com) or WhatsApp (@hellocodelinux).
+- **Build / Plan Modes** — Two modes: **Build** (full tool access) and **Plan** (read-only). Switch instantly with `Ctrl+B`.
+- **Context Compaction** — Automatic conversation summarization when context fills up. Preserves key decisions, file changes, and open tasks while truncating old tool output.
+- **Session Management** — Full session persistence: save, load, switch, rename, delete. Sessions survive restarts.
+- **Theme Picker** — Multiple built-in themes, switchable at runtime (`Ctrl+P`).
+- **Model Picker** — Fetch and switch models on the fly (`Ctrl+O`). Auto-detects free models from OpenCode Zen.
+- **File Picker** — Interactive file browser with fuzzy filtering. Trigger with `@` in the input.
+- **Shell Integration** — Run shell commands inline with `!command` or `/shell command`.
+- **File References** — Reference files with `@path` — PyCode reads them on demand via the Read tool.
+- **Reasoning Display** — Shows model "thinking" process with elapsed time (for models that support it).
+- **Diff Rendering** — Colored diffs for `apply_patch` results (added/removed lines highlighted).
+- **Context Usage Bar** — Real-time token usage and percentage in the status bar.
+- **Settings Modal** — Configure API endpoint, key, and model without editing files (`Ctrl+S`).
+- **Help Screen** — Keyboard shortcuts reference (`F1`).
+- **Copy Messages** — Copy assistant responses to clipboard (`Ctrl+Y`).
+- **Error Dialogs** — Friendly error handling for rate limits, auth failures, server errors.
+- **Proxy Support** — Respects `HTTPS_PROXY` / `HTTP_PROXY` environment variables.
+- **Models.dev Integration** — Auto-fetches real context windows from the models.dev catalog (same as opencode).
 
 ### Available Tools
 
@@ -40,8 +58,7 @@ PyCode ships with a set of built-in tools the LLM can call:
 
 ## Requirements
 
-- **Python 3.10+** (for running from source)
-- **Linux x86_64** (for the pre-compiled binary)
+- **Linux x86_64** (pre-compiled binary)
 - **No API key needed** — PyCode ships pre-configured to use the free [OpenCode Zen](https://opencode.ai/zen) endpoint, which offers 5 free models out of the box:
 
   - `hy3-free`
@@ -56,56 +73,29 @@ PyCode ships with a set of built-in tools the LLM can call:
 
 ## Installation
 
-### Option 1 — Pre-compiled Binary (Linux x86_64)
+### Pre-compiled Binary (Linux x86_64)
 
 No dependencies required. Download and run:
 
 ```bash
-curl -L https://shure.kozow.com/download.php?type=bin -o pycode && chmod +x ./pycode
+curl -L https://shure.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 ./pycode
 ```
 
-### Option 2 — From Source
+**Source code is not publicly available.** PyCode is distributed as a free binary only. If you have feedback, suggestions, or bug reports, please contact:
 
-```bash
-# Download source
-curl -L https://shure.kozow.com/download.php?type=src -o pycode-source.zip
-unzip pycode-source.zip
-cd pycode-source
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run
-python main.py
-```
-
-Dependencies are kept minimal:
-
-```
-textual==8.2.8
-httpx==0.28.1
-```
-
----
-
-## Building from Source
-
-The binary is produced with [PyInstaller](https://pyinstaller.org/) using the
-provided spec file:
-
-```bash
-pip install pyinstaller
-pyinstaller src/pycode.spec
-```
-
-The resulting executable is written to `dist/pycode` (~15 MB).
+- **Email:** lu9dce@gmx.com
+- **WhatsApp:** @hellocodelinux
 
 ---
 
 ## License
 
-PyCode is released under the **MIT License**.
+**PyCode is free to use but NOT open source.** No source code is available. The binary is distributed freely for personal and commercial use.
+
+Feedback, suggestions, and bug reports are welcome:
+- **Email:** lu9dce@gmx.com
+- **WhatsApp:** @hellocodelinux
 
 ---
 
@@ -113,6 +103,7 @@ PyCode is released under the **MIT License**.
 
 - **Website:** https://shure.kozow.com/
 - **Email:** lu9dce@gmx.com
+- **WhatsApp:** @hellocodelinux
 - **Author:** Eduardo Castillo (lu9dce@gmx.com)
 
-© 2026 PyCode — Open source (MIT). Built with ❤️ for terminal lovers.
+© 2026 PyCode — Free to use (binary only). Built with ❤️ for terminal lovers.
