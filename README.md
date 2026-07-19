@@ -4,7 +4,7 @@
 Chat with LLMs, run tools, and write code — all without leaving your command line.
 It uses under **50 MB** of RAM and is built with Python and [Textual](https://textual.textualize.io/).
 
-> Website: https://shure.kozow.com/
+> Website: [https://shure.kozow.com/](https://pycode.kozow.com/)
 > Contact: lu9dce@gmx.com
 > WhatsApp: @hellocodelinux
 
@@ -82,10 +82,7 @@ curl -L https://shure.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 ./pycode
 ```
 
-**Source code is not publicly available.** PyCode is distributed as a free binary only. If you have feedback, suggestions, or bug reports, please contact:
-
-- **Email:** lu9dce@gmx.com
-- **WhatsApp:** @hellocodelinux
+**Source code is not publicly available.** PyCode is distributed as a free binary only. If you have feedback, suggestions, or bug reports, please contact
 
 ---
 
@@ -93,17 +90,15 @@ curl -L https://shure.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 
 **PyCode is free to use but NOT open source.** No source code is available. The binary is distributed freely for personal and commercial use.
 
-Feedback, suggestions, and bug reports are welcome:
-- **Email:** lu9dce@gmx.com
-- **WhatsApp:** @hellocodelinux
+Feedback, suggestions, and bug reports are welcome
 
 ---
 
 ## Contact
 
-- **Website:** https://shure.kozow.com/
+- **Website:** https://pycode.kozow.com/
 - **Email:** lu9dce@gmx.com
 - **WhatsApp:** @hellocodelinux
-- **Author:** Eduardo Castillo (lu9dce@gmx.com)
-
+- **Author:** Eduardo Castillo
+  
 © 2026 PyCode — Free to use (binary only). Built with ❤️ for terminal lovers.
