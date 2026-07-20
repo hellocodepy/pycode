@@ -4,7 +4,7 @@
 Chat with LLMs, run tools, and write code — all without leaving your command line.
 It uses under **50 MB** of RAM and is built with Python and [Textual](https://textual.textualize.io/).
 
-> Website: https://pycode.kozow.com/
+> Website: https://shure.kozow.com/
 > Contact: lu9dce@gmx.com
 > WhatsApp: @hellocodelinux
 
@@ -18,7 +18,7 @@ It uses under **50 MB** of RAM and is built with Python and [Textual](https://te
 - **Chat Sessions** — Persistent conversations with history. Revisit, rename, or delete sessions anytime.
 - **Beautiful TUI** — Powered by Textual. Rich colors, themes, and a responsive terminal interface.
 - **Free to Use** — 100% free to use. No source code available (binary only). Suggestions and feedback welcome via email (lu9dce@gmx.com) or WhatsApp (@hellocodelinux).
-- **Build / Plan Modes** — Two modes: **Build** (full tool access) and **Plan** (read-only). Switch instantly with `Ctrl+B`.
+- **Build / Plan Modes** — Two modes: **Build** (full tool access) and **Plan** (read-only). Switch instantly with `Ctrl+B`. Plan mode injects system reminders so the LLM knows to only plan and not make changes.
 - **Context Compaction** — Automatic conversation summarization when context fills up. Preserves key decisions, file changes, and open tasks while truncating old tool output.
 - **Session Management** — Full session persistence: save, load, switch, rename, delete. Sessions survive restarts.
 - **Theme Picker** — Multiple built-in themes, switchable at runtime (`Ctrl+P`).
@@ -35,9 +35,9 @@ It uses under **50 MB** of RAM and is built with Python and [Textual](https://te
 - **Error Dialogs** — Friendly error handling for rate limits, auth failures, server errors.
 - **Proxy Support** — Respects `HTTPS_PROXY` / `HTTP_PROXY` environment variables.
 - **Models.dev Integration** — Auto-fetches real context windows from the models.dev catalog (same as opencode).
-- **Message Queue** — Type while the model is processing; messages are queued and sent automatically when the current turn finishes.
-- **Non-blocking Tools** — All tools execute in background threads. The UI stays responsive even during long-running commands or web requests.
-- **Update Notifications** — Automatically checks for new versions on startup and notifies you if an update is available.
+- **Web Browser Mode** — Run `pycode web` to serve the TUI in your browser via [textual-serve](https://github.com/Textualize/textual-serve). No installation needed on the client side.
+- **CLI Subcommands** — `pycode` (TUI), `pycode web` (browser), `pycode run TEXT` (one-shot prompt), `pycode help` (usage + version + update check).
+- **Auto Update Check** — `pycode help` checks for newer versions and displays an update notice if available.
 
 ### Available Tools
 
@@ -81,8 +81,10 @@ PyCode ships with a set of built-in tools the LLM can call:
 No dependencies required. Download and run:
 
 ```bash
-curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
-./pycode
+curl -L https://shure.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
+./pycode           # Start the TUI
+./pycode web       # Serve in browser
+./pycode help      # Show version and usage
 ```
 
 **Source code is not publicly available.** PyCode is distributed as a free binary only. If you have feedback, suggestions, or bug reports, please contact:
@@ -104,7 +106,7 @@ Feedback, suggestions, and bug reports are welcome:
 
 ## Contact
 
-- **Website:** https://pycode.kozow.com/
+- **Website:** https://shure.kozow.com/
 - **Email:** lu9dce@gmx.com
 - **WhatsApp:** @hellocodelinux
 - **Author:** Eduardo Castillo (lu9dce@gmx.com)
