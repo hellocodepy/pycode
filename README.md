@@ -18,6 +18,18 @@
 
 ---
 
+<div align="center">
+
+## 📥 Download & Project
+
+### 🌐 **Website:** [pycode.kozow.com](https://pycode.kozow.com/)
+
+### 📦 **Binary available on the website**
+
+</div>
+
+---
+
 ## ✨ Features
 
 ### 🧠 Core
