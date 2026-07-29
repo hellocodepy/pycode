@@ -36,7 +36,7 @@
 
 | Feature | Description |
 |---------|-------------|
-| 🔀 **Build / Plan Modes** | Full access or read-only — switch with `Ctrl+B`. Plan mode injects system reminders so the LLM only plans. |
+| 🔀 **Build / Plan / Chat Modes** | Full access, read-only, or web search only — switch with `Ctrl+B`. Chat mode uses only web tools for conversational queries. |
 | 💬 **Chat Sessions** | Persistent conversations with history. Revisit, rename, or delete anytime. |
 | 📦 **Context Compaction** | Auto-summarizes when context fills. Preserves decisions, file changes, and tasks. |
 | 🎨 **Theme Picker** | Multiple built-in themes, switchable at runtime (`Ctrl+P`). |
@@ -97,12 +97,6 @@
 curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 ```
 
-### 📦 Install (Linux ARM64)
-
-```bash
-curl -L https://pycode.kozow.com/bin/pycode-arm64 -o pycode && chmod +x ./pycode
-```
-
 ### ▶️ Run
 
 ```bash
@@ -122,7 +116,7 @@ curl -L https://pycode.kozow.com/bin/pycode-arm64 -o pycode && chmod +x ./pycode
 | `Ctrl+N` | New session |
 | `Ctrl+L` | Clear chat |
 | `Ctrl+R` | Session picker |
-| `Ctrl+B` | Toggle build/plan mode |
+| `Ctrl+B` | Cycle mode: build/plan/chat |
 | `Ctrl+S` | Settings dialog |
 | `Ctrl+P` | Theme picker |
 | `Ctrl+O` | Model picker |
@@ -166,9 +160,9 @@ PyCode works with any OpenAI-compatible API. Configure via `Ctrl+S` or edit `~/.
 
 | Requirement | Details |
 |-------------|---------|
-| 🖥️ **OS** | Linux (x86_64 or ARM64) |
+| 🖥️ **OS** | Linux (x86_64) |
 | 💾 **RAM** | < 50 MB |
-| 📦 **Binary** | ~15 MB (x86_64) / ~19 MB (ARM64) |
+| 📦 **Binary** | ~15 MB (x86_64) |
 | 📜 **License** | Free to use (binary only) |
 
 ---
