@@ -52,11 +52,13 @@
 | 🔍 `edit` | Edit files with exact string replacement |
 | 📁 `glob` | Find files by glob pattern |
 | 🔎 `grep` | Search file contents with regex |
-| 🩹 `apply_patch` | Apply unified diff-style patches |
+| 🩹 `apply_patch` | Apply aider-style patches |
 | 🌐 `webfetch` | Fetch and extract text from a URL |
 | 🔍 `websearch` | Search the web for current information |
 | ✅ `todowrite` | Create and manage a structured task list |
 | ❓ `question` | Ask the user a multiple-choice question |
+| 🤖 `task` | Spawn sub-agents for parallel research |
+| 🏷️ `set_title` | Set session title (auto-generated) |
 
 ### 🎯 UI & Experience
 
@@ -95,6 +97,12 @@
 curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 ```
 
+### 📦 Install (Linux ARM64)
+
+```bash
+curl -L https://pycode.kozow.com/bin/pycode-arm64 -o pycode && chmod +x ./pycode
+```
+
 ### ▶️ Run
 
 ```bash
@@ -106,19 +114,51 @@ curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 
 ---
 
-## 🤖 Free Models Included
+## ⌨️ Keyboard Shortcuts
 
-No API key needed! PyCode ships pre-configured with **5 free models** from [OpenCode Zen](https://opencode.ai/zen):
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+C` | Quit |
+| `Ctrl+N` | New session |
+| `Ctrl+L` | Clear chat |
+| `Ctrl+R` | Session picker |
+| `Ctrl+B` | Toggle build/plan mode |
+| `Ctrl+S` | Settings dialog |
+| `Ctrl+P` | Theme picker |
+| `Ctrl+O` | Model picker |
+| `Ctrl+Y` | Copy message to clipboard |
+| `F1` | Help screen |
+| `Escape` | Stop generation / abort |
+| `PageUp/PageDown` | Scroll chat |
+| `@` (in input) | File picker |
+| `!command` (in input) | Run shell command |
+| `↑/↓` (in input) | Recall input history |
+
+---
+
+## 🤖 Models
+
+### Free Models (No API key needed)
+
+PyCode ships pre-configured with **5 free models** from [OpenCode Zen](https://opencode.ai/zen):
 
 | Model | Description |
 |-------|-------------|
 | 🧠 `hy3-free` | High-quality reasoning |
 | ⚡ `deepseek-v4-flash-free` | Fast and efficient |
-| 🔍 `mimo-v2.5-free` | Balanced performance |
+| 🔍 `mimo-v2.5-free` | Balanced performance (default) |
 | 💡 `nemotron-3-ultra-free` | Advanced capabilities |
 | 🚀 `north-mini-code-free` | Optimized for code |
+| 🌐 [Exa](https://exa.ai/) | Web search — also **free** |
 
-🌐 Web search via [Exa](https://exa.ai/) is also **free**.
+### Bring Your Own API
+
+PyCode works with any OpenAI-compatible API. Configure via `Ctrl+S` or edit `~/.config/pycode-tui/config.json`:
+
+- **OpenAI** — set API URL to `https://api.openai.com/v1`
+- **Anthropic** — via [LiteLLM](https://github.com/BerriAI/litellm) proxy
+- **Ollama** — set API URL to `http://localhost:11434/v1`
+- **OpenCode Zen** — default, free models included
 
 ---
 
@@ -126,17 +166,41 @@ No API key needed! PyCode ships pre-configured with **5 free models** from [Open
 
 | Requirement | Details |
 |-------------|---------|
-| 🖥️ **OS** | Linux x86_64 |
+| 🖥️ **OS** | Linux (x86_64 or ARM64) |
 | 💾 **RAM** | < 50 MB |
-| 📦 **Binary** | ~15 MB |
-| 🐍 **Language** | Python |
-| 📜 **License** | Free (binary only) |
+| 📦 **Binary** | ~15 MB (x86_64) / ~19 MB (ARM64) |
+| 📜 **License** | Free to use (binary only) |
+
+---
+
+## ⚙️ Configuration
+
+| Path | Description |
+|------|-------------|
+| `~/.config/pycode-tui/config.json` | API URL, API key, model, theme |
+| `~/.config/pycode-tui/sessions/` | Session history (JSON) |
+| `~/.cache/pycode-tui/models-dev.json` | Model catalog cache (7-day TTL) |
+
+### Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `HTTPS_PROXY` | Proxy for HTTPS requests |
+| `HTTP_PROXY` | Proxy for HTTP requests |
+| `SSL_CERT_FILE` | Custom CA certificate bundle |
+| `TEXTUAL_DRIVER` | Textual driver override |
 
 ---
 
 ## 📜 License
 
-**PyCode is free to use but NOT open source.** No source code is available. The binary is distributed freely for personal and commercial use.
+**PyCode is free to use but NOT open source.** No source code is available for redistribution. The binary is distributed freely for personal and commercial use.
+
+---
+
+## 🙏 Credits
+
+Inspired by [OpenCode](https://opencode.ai/) — an AI-powered coding assistant for the terminal.
 
 ---
 
