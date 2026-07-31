@@ -57,7 +57,7 @@
 | 🔍 `websearch` | Search the web for current information |
 | ✅ `todowrite` | Create and manage a structured task list |
 | ❓ `question` | Ask the user a multiple-choice question |
-| 🤖 `task` | Spawn sub-agents for parallel research |
+| 🤖 `task` | Spawn sub-agents for delegated research |
 | 🏷️ `set_title` | Set session title (auto-generated) |
 
 ### 🎯 UI & Experience
@@ -68,6 +68,7 @@
 | 📊 **Context Usage Bar** | Real-time token usage and percentage in the status bar. |
 | 🧠 **Reasoning Display** | Shows model "thinking" process with elapsed time. |
 | 📊 **Diff Rendering** | Colored diffs for `apply_patch` results. |
+| 🕘 **Persistent Input History** | Your previous prompts are saved to disk and recalled in any new session with `↑/↓`. |
 | ⚙️ **Settings Modal** | Configure API endpoint, key, and model (`Ctrl+S`). |
 | ❓ **Help Screen** | Keyboard shortcuts reference (`F1`). |
 | 📋 **Copy Messages** | Copy assistant responses to clipboard (`Ctrl+Y`). |
@@ -81,7 +82,7 @@
 | 💻 **CLI Subcommands** | `pycode` (TUI), `pycode web` (browser), `pycode run TEXT` (one-shot), `pycode help` (version + usage). |
 | 🔍 **Auto Update Check** | `pycode help` checks for newer versions and shows an update notice. |
 | 🔄 **Models.dev Integration** | Auto-fetches real context windows from models.dev catalog. |
-| 🌐 **Proxy Support** | Respects `HTTPS_PROXY` / `HTTP_PROXY` environment variables. |
+| 🌐 **Proxy Support** | Respects `HTTPS_PROXY` / `HTTP_PROXY` / `ALL_PROXY` (upper or lower case) and honors `NO_PROXY` — applied only to the LLM API. |
 | 📬 **Message Queue** | Type while the model is processing — messages are queued automatically. |
 | ⚡ **Non-blocking Tools** | All tools execute in background threads. UI stays responsive. |
 | 📁 **File References** | Reference files with `@path` — PyCode reads them on demand. |
@@ -126,7 +127,7 @@ curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 | `PageUp/PageDown` | Scroll chat |
 | `@` (in input) | File picker |
 | `!command` (in input) | Run shell command |
-| `↑/↓` (in input) | Recall input history |
+| `↑/↓` (in input) | Recall input history (persistent across sessions) |
 
 ---
 
@@ -134,15 +135,16 @@ curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 
 ### Free Models (No API key needed)
 
-PyCode ships pre-configured with **5 free models** from [OpenCode Zen](https://opencode.ai/zen):
+PyCode works out of the box with [OpenCode Zen](https://opencode.ai/zen) and **auto-detects all the free models** available on the endpoint (`Ctrl+O` to pick). The default is `mimo-v2.5-free`. Real context windows are pulled from the [models.dev](https://models.dev/) catalog.
 
 | Model | Description |
 |-------|-------------|
-| 🧠 `hy3-free` | High-quality reasoning |
+| 🧠 `mimo-v2.5-free` | Balanced performance (default) |
 | ⚡ `deepseek-v4-flash-free` | Fast and efficient |
-| 🔍 `mimo-v2.5-free` | Balanced performance (default) |
+| 🔍 `ling-3.0-flash-free` | Fast language model |
 | 💡 `nemotron-3-ultra-free` | Advanced capabilities |
 | 🚀 `north-mini-code-free` | Optimized for code |
+| 🌊 `laguna-s-2.1-free` | Lightweight and fast |
 | 🌐 [Exa](https://exa.ai/) | Web search — also **free** |
 
 ### Bring Your Own API
@@ -162,8 +164,8 @@ PyCode works with any OpenAI-compatible API. Configure via `Ctrl+S` or edit `~/.
 |-------------|---------|
 | 🖥️ **OS** | Linux (x86_64) |
 | 💾 **RAM** | < 50 MB |
-| 📦 **Binary** | ~15 MB (x86_64) |
-| 📜 **License** | Free to use (binary only) |
+| 📦 **Binary** | ~25 MB (x86_64) |
+| 📜 **License** | Proprietary |
 
 ---
 
@@ -173,14 +175,17 @@ PyCode works with any OpenAI-compatible API. Configure via `Ctrl+S` or edit `~/.
 |------|-------------|
 | `~/.config/pycode-tui/config.json` | API URL, API key, model, theme |
 | `~/.config/pycode-tui/sessions/` | Session history (JSON) |
-| `~/.cache/pycode-tui/models-dev.json` | Model catalog cache (7-day TTL) |
+| `~/.config/pycode-tui/models-dev.json` | Model catalog cache (7-day TTL) |
+| `~/.config/pycode-tui/prompt-history.jsonl` | Input history (persistent across sessions) |
 
 ### Environment Variables
 
 | Variable | Description |
 |----------|-------------|
-| `HTTPS_PROXY` | Proxy for HTTPS requests |
-| `HTTP_PROXY` | Proxy for HTTP requests |
+| `HTTPS_PROXY` / `https_proxy` | Proxy for HTTPS requests (LLM API only) |
+| `HTTP_PROXY` / `http_proxy` | Proxy for HTTP requests (LLM API only) |
+| `ALL_PROXY` / `all_proxy` | Fallback proxy for any scheme (LLM API only) |
+| `NO_PROXY` / `no_proxy` | Hosts excluded from the proxy |
 | `SSL_CERT_FILE` | Custom CA certificate bundle |
 | `TEXTUAL_DRIVER` | Textual driver override |
 
@@ -188,7 +193,7 @@ PyCode works with any OpenAI-compatible API. Configure via `Ctrl+S` or edit `~/.
 
 ## 📜 License
 
-**PyCode is free to use but NOT open source.** No source code is available for redistribution. The binary is distributed freely for personal and commercial use.
+**PyCode is a closed-source, proprietary application.** It is distributed as a ready-to-run binary and is free to use, but the source code is not published and may not be redistributed or modified.
 
 ---
 
@@ -212,6 +217,6 @@ Inspired by [OpenCode](https://opencode.ai/) — an AI-powered coding assistant 
 
 **Made with ❤️ for terminal lovers**
 
-© 2026 PyCode — Free to use (binary only)
+© 2026 PyCode
 
 </div>
