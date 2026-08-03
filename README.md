@@ -69,7 +69,6 @@
 | 🧠 **Reasoning Display** | Shows model "thinking" process with elapsed time. |
 | 📊 **Diff Rendering** | Colored diffs for `apply_patch` results. |
 | 🕘 **Persistent Input History** | Your previous prompts are saved to disk and recalled in any new session with `↑/↓`. |
-| ⚙️ **Settings Modal** | Configure API endpoint, key, and model (`Ctrl+S`). |
 | ❓ **Help Screen** | Keyboard shortcuts reference (`F1`). |
 | 📋 **Copy Messages** | Copy assistant responses to clipboard (`Ctrl+Y`). |
 | 🛡️ **Error Dialogs** | Friendly handling for rate limits, auth failures, server errors. |
@@ -132,7 +131,6 @@ curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 | `Ctrl+L` | Clear chat |
 | `Ctrl+R` | Session picker |
 | `Ctrl+B` | Cycle mode: build/plan/chat |
-| `Ctrl+S` | Settings dialog |
 | `Ctrl+P` | Theme picker |
 | `Ctrl+O` | Model picker |
 | `Ctrl+Y` | Copy message to clipboard |
@@ -161,15 +159,6 @@ PyCode works out of the box with [OpenCode Zen](https://opencode.ai/zen) and **a
 | 🌊 `laguna-s-2.1-free` | Lightweight and fast |
 | 🌐 [Exa](https://exa.ai/) | Web search — also **free** |
 
-### Bring Your Own API
-
-PyCode works with any OpenAI-compatible API. Configure via `Ctrl+S` or edit `~/.config/pycode-tui/config.json`:
-
-- **OpenAI** — set API URL to `https://api.openai.com/v1`
-- **Anthropic** — via [LiteLLM](https://github.com/BerriAI/litellm) proxy
-- **Ollama** — set API URL to `http://localhost:11434/v1`
-- **OpenCode Zen** — default, free models included
-
 ---
 
 ## 📊 System Requirements
@@ -189,7 +178,7 @@ PyCode works with any OpenAI-compatible API. Configure via `Ctrl+S` or edit `~/.
 
 | Path | Description |
 |------|-------------|
-| `~/.config/pycode-tui/config.json` | API URL, API key, model, theme |
+| `~/.config/pycode-tui/config.json` | Theme only |
 | `~/.config/pycode-tui/sessions/` | Session history (JSON) |
 | `~/.config/pycode-tui/prompt-history.jsonl` | Input history (persistent across sessions) |
 | `~/.cache/pycode-tui/models-dev.json` | Model catalog cache (7-day TTL) |
