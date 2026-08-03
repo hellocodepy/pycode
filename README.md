@@ -74,12 +74,24 @@
 | 📋 **Copy Messages** | Copy assistant responses to clipboard (`Ctrl+Y`). |
 | 🛡️ **Error Dialogs** | Friendly handling for rate limits, auth failures, server errors. |
 
+### 🤖 Agents
+
+| Agent | Type | Description |
+|-------|------|-------------|
+| `build` | Primary | Default agent — full tool access, executes commands and edits files. |
+| `plan` | Primary | Read-only agent — cannot edit files or run commands. Good for analysis. |
+| `explore` | Subagent | Fast codebase exploration — finds files, searches code, answers questions about structure. |
+| `general` | Subagent | General-purpose research and multi-step task execution. |
+
+Agents are used by the `task` tool to delegate work to specialized sub-agents. Primary agents (`build`, `plan`) are selectable via `Ctrl+B`. Sub-agents (`explore`, `general`) are spawned automatically when the model uses the `task` tool.
+
 ### 🔧 Advanced
 
 | Feature | Description |
 |---------|-------------|
 | 🌐 **Web Browser Mode** | Run `pycode web` to serve the TUI in your browser via [textual-serve](https://github.com/Textualize/textual-serve). |
 | 💻 **CLI Subcommands** | `pycode` (TUI), `pycode web` (browser), `pycode run TEXT` (one-shot), `pycode help` (version + usage). |
+| 🔁 **Session Resume** | `pycode -s SESSION_ID` resumes a previous session by ID. |
 | 🔍 **Auto Update Check** | `pycode help` checks for newer versions and shows an update notice. |
 | 🔄 **Models.dev Integration** | Auto-fetches real context windows from models.dev catalog. |
 | 🌐 **Proxy Support** | Respects `HTTPS_PROXY` / `HTTP_PROXY` / `ALL_PROXY` (upper or lower case) and honors `NO_PROXY` — applied only to the LLM API. |
@@ -101,10 +113,12 @@ curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 ### ▶️ Run
 
 ```bash
-./pycode           # 🖥️  Start the TUI
-./pycode web       # 🌐  Serve in browser
-./pycode help      # ℹ️  Show version and usage
-./pycode run TEXT  # 🚀  One-shot prompt
+./pycode                  # 🖥️  Start the TUI
+./pycode -s SESSION_ID    # 🔁  Resume a previous session
+./pycode web              # 🌐  Serve in browser
+./pycode web --port 8080  # 🌐  Serve on custom port
+./pycode help             # ℹ️  Show version and usage
+./pycode run TEXT         # 🚀  One-shot prompt
 ```
 
 ---
@@ -177,8 +191,8 @@ PyCode works with any OpenAI-compatible API. Configure via `Ctrl+S` or edit `~/.
 |------|-------------|
 | `~/.config/pycode-tui/config.json` | API URL, API key, model, theme |
 | `~/.config/pycode-tui/sessions/` | Session history (JSON) |
-| `~/.config/pycode-tui/models-dev.json` | Model catalog cache (7-day TTL) |
 | `~/.config/pycode-tui/prompt-history.jsonl` | Input history (persistent across sessions) |
+| `~/.cache/pycode-tui/models-dev.json` | Model catalog cache (7-day TTL) |
 
 ### Environment Variables
 
