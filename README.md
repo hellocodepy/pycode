@@ -40,7 +40,7 @@
 | 💬 **Chat Sessions** | Persistent conversations with history. Revisit, rename, or delete anytime. |
 | 📦 **Context Compaction** | Auto-summarizes when context fills. Preserves decisions, file changes, and tasks. |
 | 🎨 **Theme Picker** | Multiple built-in themes, switchable at runtime (`Ctrl+P`). |
-| 🤖 **Model Picker** | Fetch and switch models on the fly (`Ctrl+O`). Auto-detects free models. |
+| 🤖 **Model Picker** | Fetch and switch models on the fly (`Ctrl+O`). Auto-detects available models. |
 
 ### 🛠️ Tools
 
@@ -147,16 +147,16 @@ curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
 
 ### Free Models (No API key needed)
 
-PyCode works out of the box with [OpenCode Zen](https://opencode.ai/zen) and **auto-detects all the free models** available on the endpoint (`Ctrl+O` to pick). The default is `mimo-v2.5-free`. Real context windows are pulled from the [models.dev](https://models.dev/) catalog.
+PyCode works out of the box and **detects the available models** on the endpoint (`Ctrl+O` to pick). The default is `mimo-v2.5`. Real context windows are pulled from the [models.dev](https://models.dev/) catalog.
 
 | Model | Description |
 |-------|-------------|
-| 🧠 `mimo-v2.5-free` | Balanced performance (default) |
-| ⚡ `deepseek-v4-flash-free` | Fast and efficient |
-| 🔍 `ling-3.0-flash-free` | Fast language model |
-| 💡 `nemotron-3-ultra-free` | Advanced capabilities |
-| 🚀 `north-mini-code-free` | Optimized for code |
-| 🌊 `laguna-s-2.1-free` | Lightweight and fast |
+| 🧠 `mimo-v2.5` | Balanced performance (default) |
+| ⚡ `deepseek-v4-flash` | Fast and efficient |
+| 🔍 `ling-3.0-flash` | Fast language model |
+| 💡 `nemotron-3-ultra` | Advanced capabilities |
+| 🚀 `north-mini-code` | Optimized for code |
+| 🌊 `laguna-s-2.1` | Lightweight and fast |
 | 🌐 [Exa](https://exa.ai/) | Web search — also **free** |
 
 ---
@@ -204,7 +204,7 @@ PyCode works out of the box with [OpenCode Zen](https://opencode.ai/zen) and **a
 
 ## 🙏 Credits
 
-Inspired by [OpenCode](https://opencode.ai/) — an AI-powered coding assistant for the terminal.
+Inspired by AI-powered coding assistants for the terminal.
 
 ---
 
