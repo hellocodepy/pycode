@@ -166,9 +166,9 @@ PyCode works out of the box and **detects the available models** on the endpoint
 | Requirement | Details |
 |-------------|---------|
 | 🖥️ **OS** | Linux (x86_64) |
-| 🧠 **RAM** | ~80 MB (process: ~2 MB CLI + ~78 MB core) |
-| 📦 **Binary** | ~25 MB (x86_64) |
-| 💽 **Disk** | ~40 MB (25 MB binary + ~15 MB config/cache) |
+| 🧠 **RAM** | ~20 MB |
+| 📦 **Binary** | ~20 MB (x86_64) |
+| 💽 **Disk** | ~35 MB |
 | ⚡ **CPU** | Any x86_64 processor (~1% idle, ~5% during inference) |
 | 📜 **License** | Proprietary |
 
