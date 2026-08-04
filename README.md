@@ -36,11 +36,14 @@
 
 | Feature | Description |
 |---------|-------------|
-| 🔀 **Build / Plan / Chat Modes** | Full access, read-only, or web search only — switch with `Ctrl+B`. Chat mode uses only web tools for conversational queries. |
+| 🧠 **Multi-Model (Free)** | 6 free models included. No API key needed. |
+| 🔀 **Build / Plan / Chat Modes** | Full access, read-only, or web search only — switch with `Ctrl+B`. |
 | 💬 **Chat Sessions** | Persistent conversations with history. Revisit, rename, or delete anytime. |
-| 📦 **Context Compaction** | Auto-summarizes when context fills. Preserves decisions, file changes, and tasks. |
+| 💾 **Session Management** | Full persistence: save, load, switch, rename, delete. Sessions survive restarts. |
+| 📦 **Context Compaction** | Auto-summarizes long conversations. Preserves decisions, file changes, and tasks. |
 | 🎨 **Theme Picker** | Multiple built-in themes, switchable at runtime (`Ctrl+P`). |
 | 🤖 **Model Picker** | Fetch and switch models on the fly (`Ctrl+O`). Auto-detects available models. |
+| ⚙️ **Settings Modal** | Configure API endpoint, key, and model without editing files (`Ctrl+S`). |
 
 ### 🛠️ Tools
 
@@ -69,9 +72,9 @@
 | 🧠 **Reasoning Display** | Shows model "thinking" process with elapsed time. |
 | 📊 **Diff Rendering** | Colored diffs for `apply_patch` results. |
 | 🕘 **Persistent Input History** | Your previous prompts are saved to disk and recalled in any new session with `↑/↓`. |
-| ❓ **Help Screen** | Keyboard shortcuts reference (`F1`). |
 | 📋 **Copy Messages** | Copy assistant responses to clipboard (`Ctrl+Y`). |
 | 🛡️ **Error Dialogs** | Friendly handling for rate limits, auth failures, server errors. |
+| 📁 **File Picker** | Interactive file browser with fuzzy filtering. Trigger with `@` in input. |
 
 ### 🤖 Agents
 
@@ -171,28 +174,6 @@ PyCode works out of the box and **detects the available models** on the endpoint
 | 💽 **Disk** | ~35 MB |
 | ⚡ **CPU** | Any x86_64 processor (~1% idle, ~5% during inference) |
 | 📜 **License** | Proprietary |
-
----
-
-## ⚙️ Configuration
-
-| Path | Description |
-|------|-------------|
-| `~/.config/pycode-tui/config.json` | Theme only |
-| `~/.config/pycode-tui/sessions/` | Session history (JSON) |
-| `~/.config/pycode-tui/prompt-history.jsonl` | Input history (persistent across sessions) |
-| `~/.cache/pycode-tui/models-dev.json` | Model catalog cache (7-day TTL) |
-
-### Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `HTTPS_PROXY` / `https_proxy` | Proxy for HTTPS requests (LLM API only) |
-| `HTTP_PROXY` / `http_proxy` | Proxy for HTTP requests (LLM API only) |
-| `ALL_PROXY` / `all_proxy` | Fallback proxy for any scheme (LLM API only) |
-| `NO_PROXY` / `no_proxy` | Hosts excluded from the proxy |
-| `SSL_CERT_FILE` | Custom CA certificate bundle |
-| `TEXTUAL_DRIVER` | Textual driver override |
 
 ---
 
