@@ -20,185 +20,203 @@
 
 <div align="center">
 
-## 📥 Download & Project
+## 🤯 ¿Cansado de pestañas infinitas, setups dolorosos y API keys que nunca funcionan?
 
-### 🌐 **Website:** [pycode.kozow.com](https://pycode.kozow.com/)
+### 💥 Con PyCode, olvídate de todo eso.
 
-### 📦 **Binary available on the website**
+> **Tu asistente de IA vive en tu terminal. Escribe código, corrige bugs y busca en la web con una sola línea de comando.**
+
+**Sin API keys. Sin instalaciones locas. Sin complicaciones. Solo descarga y escribe.**
 
 </div>
 
 ---
 
-## ✨ Features
+<div align="center">
 
-### 🧠 Core
+## 📥 Descárgalo YA
+
+### 🌐 **Website:** [pycode.kozow.com](https://pycode.kozow.com/)
+
+### 📦 **Binary disponible en el sitio — listo para usar en segundos**
+
+</div>
+
+---
+
+## ✨ ¿Por qué PyCode es DIFERENTE?
+
+### 🧠 Núcleo inteligente
 
 | Feature | Description |
 |---------|-------------|
-| 🔀 **Build / Plan / Chat Modes** | Full access, read-only, or web search only — switch with `Ctrl+B`. Chat mode uses only web tools for conversational queries. |
-| 💬 **Chat Sessions** | Persistent conversations with history. Revisit, rename, or delete anytime. |
-| 📦 **Context Compaction** | Auto-summarizes when context fills. Preserves decisions, file changes, and tasks. |
-| 🎨 **Theme Picker** | Multiple built-in themes, switchable at runtime (`Ctrl+P`). |
-| 🤖 **Model Picker** | Fetch and switch models on the fly (`Ctrl+O`). Auto-detects available models. |
+| 🔀 **Modos Build / Plan / Chat** | Acceso total, solo lectura o solo web — cámbialos con `Ctrl+B`. |
+| 💬 **Sesiones de Chat** | Conversaciones persistentes. Revísalas, renómbralas o bórralas cuando quieras. |
+| 📦 **Compactación de Contexto** | Resume automáticamente cuando se llena. No pierdes nada importante. |
+| 🎨 **Selector de Temas** | Varios temas integrados, cámbialos en vivo con `Ctrl+P`. |
+| 🤖 **Selector de Modelos** | Descubre y cambia de modelo al instante con `Ctrl+O`. |
 
-### 🛠️ Tools
+### 🛠️ Herramientas que HACEN el trabajo
 
 | Tool | Description |
 |------|-------------|
-| 📝 `bash` | Execute shell commands |
-| 📄 `read` | Read file contents |
-| ✏️ `write` | Write/create files |
-| 🔍 `edit` | Edit files with exact string replacement |
-| 📁 `glob` | Find files by glob pattern |
-| 🔎 `grep` | Search file contents with regex |
-| 🩹 `apply_patch` | Apply aider-style patches |
-| 🌐 `webfetch` | Fetch and extract text from a URL |
-| 🔍 `websearch` | Search the web for current information |
-| ✅ `todowrite` | Create and manage a structured task list |
-| ❓ `question` | Ask the user a multiple-choice question |
-| 🧠 `memory` | Search saved sessions for context and retrieve relevant snippets |
-| 🤖 `task` | Spawn sub-agents for delegated research |
-| 🏷️ `set_title` | Set session title (auto-generated) |
+| 📝 `bash` | Ejecuta comandos de shell |
+| 📄 `read` | Lee archivos |
+| ✏️ `write` | Crea y escribe archivos |
+| 🔍 `edit` | Edita con reemplazo exacto de texto |
+| 📁 `glob` | Encuentra archivos por patrón |
+| 🔎 `grep` | Busca contenido con regex |
+| 🩹 `apply_patch` | Aplica parches estilo aider |
+| 🌐 `webfetch` | Extrae texto de cualquier URL |
+| 🔍 `websearch` | Busca en la web lo más reciente |
+| ✅ `todowrite` | Lista de tareas estructurada |
+| ❓ `question` | Haz preguntas de opción múltiple |
+| 🧠 `memory` | Recupera contexto de sesiones pasadas |
+| 🤖 `task` | Sub-agentes para delegar trabajo |
+| 🏷️ `set_title` | Título de sesión automático |
 
-### 🎯 UI & Experience
+### 🎯 Una experiencia QUE ENGANCHA
 
 | Feature | Description |
 |---------|-------------|
-| 🎨 **Beautiful TUI** | Powered by [Textual](https://textual.textualize.io/). Rich colors, themes, responsive. |
-| 📊 **Context Usage Bar** | Real-time token usage and percentage in the status bar. |
-| 🧠 **Reasoning Display** | Shows model "thinking" process with elapsed time. |
-| 📊 **Diff Rendering** | Colored diffs for `apply_patch` results. |
-| 🕘 **Persistent Input History** | Your previous prompts are saved to disk and recalled in any new session with `↑/↓`. |
-| ❓ **Help Screen** | Keyboard shortcuts reference with 2 pages (`F1`). |
-| 📋 **Copy Messages** | Copy assistant responses to clipboard via `/copy` (OSC 52, works in web). |
-| 🖱️ **Mouse Selection** | Toggle mouse selection with `Ctrl+S` or `/select` to select text from chat. |
-| 🛡️ **Error Dialogs** | Friendly handling for rate limits, auth failures, server errors. |
-| 🧠 **Session Memory** | The `memory` tool searches saved sessions for context and retrieves relevant snippets from past conversations. |
+| 🎨 **TUI hermosa** | Hecha con [Textual](https://textual.textualize.io/). Colores vivos, responsive. |
+| 📊 **Barra de Contexto** | Uso de tokens en tiempo real en la barra de estado. |
+| 🧠 **Thinking en vivo** | Ve el "proceso de pensamiento" del modelo con el tiempo transcurrido. |
+| 📊 **Diffs con color** | Diferencias resaltadas para `apply_patch`. |
+| 🕘 **Historial persistente** | Tus prompts se guardan y recuerdan con `↑/↓`. |
+| ❓ **Pantalla de Ayuda** | Atajos de teclado en 2 páginas (`F1`). |
+| 📋 **Copiar mensajes** | Copia respuestas con `/copy` (OSC 52, funciona en web). |
+| 🖱️ **Selección con mouse** | Activa con `Ctrl+S` o `/select`. |
+| 🛡️ **Dialogos de error** | Manejo amigable de límites, auth y errores. |
+| 🧠 **Memoria de sesión** | El tool `memory` recupera snippets de charlas pasadas. |
 
-### 🤖 Agents
+### 🤖 Agentes listos para todo
 
 | Agent | Type | Description |
 |-------|------|-------------|
-| `build` | Primary | Default agent — full tool access, executes commands and edits files. |
-| `plan` | Primary | Read-only agent — cannot edit files or run commands. Good for analysis. |
-| `explore` | Subagent | Fast codebase exploration — finds files, searches code, answers questions about structure. |
-| `general` | Subagent | General-purpose research and multi-step task execution. |
+| `build` | Primary | Agente por defecto — acceso total a herramientas. |
+| `plan` | Primary | Solo lectura — ideal para análisis. |
+| `explore` | Subagent | Exploración rápida de código. |
+| `general` | Subagent | Investigación y tareas multi-paso. |
 
-Agents are used by the `task` tool to delegate work to specialized sub-agents. Primary agents (`build`, `plan`) are selectable via `Ctrl+B`. Sub-agents (`explore`, `general`) are spawned automatically when the model uses the `task` tool.
-
-### 🔧 Advanced
+### 🔧 Modo AVANZADO
 
 | Feature | Description |
 |---------|-------------|
-| 🌐 **Web Browser Mode** | Run `pycode web` to serve the TUI in your browser via [textual-serve](https://github.com/Textualize/textual-serve). Options: `--port PORT` (default: 10365), `--public-url URL` for external access. |
-| 💻 **CLI Subcommands** | `pycode` (TUI), `pycode web` (browser), `pycode run TEXT` (one-shot), `pycode help` (version + usage). |
-| 🔁 **Session Resume** | `pycode -s SESSION_ID` resumes a previous session by ID. |
-| 🔍 **Auto Update Check** | `pycode help` checks for newer versions and shows an update notice. |
-| 🔄 **Models.dev Integration** | Auto-fetches real context windows from models.dev catalog. |
-| 🌐 **Proxy Support** | Respects `HTTPS_PROXY` / `HTTP_PROXY` / `ALL_PROXY` (upper or lower case) and honors `NO_PROXY` — applied only to the LLM API. |
-| 📬 **Message Queue** | Type while the model is processing — messages are queued automatically. |
-| ⚡ **Non-blocking Tools** | All tools execute in background threads. UI stays responsive. |
-| 📁 **File References** | Reference files with `@path` or `/file` browser — PyCode reads them on demand. |
-| 🖥️ **Shell Integration** | Run shell commands inline with `!command` or `/shell command`. |
-| 📝 **Slash Commands** | Type `/` to open the commands menu with filterable options. |
+| 🌐 **Web Browser Mode** | `pycode web` sirve la TUI en el navegador vía [textual-serve](https://github.com/Textualize/textual-serve). |
+| 💻 **Subcomandos CLI** | `pycode`, `pycode web`, `pycode run TEXT`, `pycode help`. |
+| 🔁 **Reanudar sesión** | `pycode -s SESSION_ID` retoma donde quedaste. |
+| 🔍 **Auto update** | `pycode help` avisa si hay versión nueva. |
+| 🔄 **models.dev** | Context windows reales desde el catálogo. |
+| 🌐 **Proxy** | Respeta `HTTPS_PROXY` / `HTTP_PROXY` / `ALL_PROXY` y `NO_PROXY`. |
+| 📬 **Cola de mensajes** | Escribe mientras procesa — se encola solo. |
+| ⚡ **Herramientas no bloqueantes** | Todo en hilos en background. UI fluido. |
+| 📁 **Referencias @path** | Incluye archivos con `@path` o `/file`. |
+| 🖥️ **Shell inline** | `!comando` o `/shell comando`. |
+| 📝 **Slash commands** | Escribe `/` para el menú filtrable. |
 
 ---
 
-## 🚀 Quick Start
+## 🤖 7 MODELOS GRATIS — ¡SIN API KEY!
 
-### 📦 Install (Linux x86_64)
-
-```bash
-curl -L https://pycode.kozow.com/bin/pycode -o pycode && chmod +x ./pycode
-```
-
-### ▶️ Run
-
-```bash
-./pycode                  # 🖥️  Start the TUI
-./pycode -s SESSION_ID    # 🔁  Resume a previous session
-./pycode web              # 🌐  Serve in browser
-./pycode web --port 8080  # 🌐  Serve on custom port
-./pycode web --public-url http://example.com:8080  # 🌐  With public URL
-./pycode help             # ℹ️  Show version and usage
-./pycode run TEXT         # 🚀  One-shot prompt
-```
-
----
-
-## ⌨️ Keyboard Shortcuts
-
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl+C` | Copy selected text |
-| `Ctrl+V` | Paste in input |
-| `Ctrl+N` | New session |
-| `Ctrl+L` | Clear chat |
-| `Ctrl+R` | Session picker |
-| `Ctrl+B` | Cycle mode: build/plan/chat |
-| `Ctrl+P` | Theme picker |
-| `Ctrl+O` | Model picker |
-| `Ctrl+S` | Toggle mouse selection mode |
-| `F1` | Help screen (2 pages) |
-| `Escape` | Stop generation / abort |
-| `PageUp/PageDown` | Scroll chat |
-| `/` | Open slash commands menu (filterable, `Enter` to run, `Esc` to close) |
-| `/select` | Toggle mouse selection mode |
-| `/copy` | Copy a message to clipboard |
-| `/file` | Select file/folder (browser, Space to pick) |
-| `/shell` | Run a shell command (e.g. `/shell ls`) |
-| `/exit` | Exit PyCode |
-| `@` (in input) | File picker |
-| `!command` (in input) | Run shell command |
-| `↑/↓` (in input) | Recall input history (persistent across sessions) |
-
----
-
-## 🤖 Models
-
-### Free Models (No API key needed)
-
-PyCode works out of the box and **detects the available models** on the endpoint (`Ctrl+O` to pick). The default is `mimo-v2.5`. Real context windows are pulled from the [models.dev](https://models.dev/) catalog.
+**Funciona out of the box. Detecta los modelos disponibles (`Ctrl+O`). El default es `mimo-v2.5`.**
 
 | Model | Description |
 |-------|-------------|
-| 🧠 `mimo-v2.5` | Balanced performance (default) |
-| ⚡ `deepseek-v4-flash` | Fast and efficient |
-| 🔍 `ling-3.0-flash` | Fast language model |
-| 💡 `nemotron-3-ultra` | Advanced capabilities |
-| 🚀 `north-mini-code` | Optimized for code |
-| 🌊 `laguna-s-2.1` | Lightweight and fast |
-| 🌐 [Exa](https://exa.ai/) | Web search — also **free** |
+| ⚡ `deepseek-v4-flash` | Rápido y eficiente |
+| 🧠 `mimo-v2.5` | Equilibrio perfecto (default) |
+| 🔥 `hy3` | Potente y versátil |
+| 🔍 `ling-3.0-tiny` | Ligero y veloz |
+| 💡 `nemotron-3-ultra` | Capacidades avanzadas |
+| 🌩️ `nemotron-3.5-lightning` | Velocidad relámpago |
+| 🌊 `laguna-s-2.1` | Liviano y rápido |
+| 🌐 [Exa](https://exa.ai/) | Búsqueda web — ¡también gratis! |
 
 ---
 
-## 📊 System Requirements
+## 🚀 Empieza EN 5 SEGUNDOS
+
+### 📦 Instala
+
+```bash
+# Linux x86_64
+curl -L https://pycode.kozow.com/bin/lnx64/pycode -o pycode && chmod +x ./pycode
+
+# Raspberry Pi (ARM64)
+curl -L https://pycode.kozow.com/bin/pi64/pycode -o pycode && chmod +x ./pycode
+
+# Windows (PowerShell)
+curl -L https://pycode.kozow.com/bin/win64/pycode.exe -o pycode.exe
+```
+
+### ▶️ Corre
+
+```bash
+./pycode                  # 🖥️  Arranca la TUI
+./pycode -s SESSION_ID    # 🔁  Retoma una sesión
+./pycode web              # 🌐  En el navegador
+./pycode web --port 8080  # 🌐  Puerto custom
+./pycode web --public-url http://example.com:8080  # 🌐  URL pública
+./pycode help             # ℹ️  Versión y uso
+./pycode run TEXT         # 🚀  Prompt de una vez
+```
+
+---
+
+## 📊 Requisitos mínimos, POTENCIA máxima
 
 | Requirement | Details |
 |-------------|---------|
-| 🖥️ **OS** | Linux (x86_64) |
-| 🧠 **RAM** | ~80 MB (process: ~2 MB CLI + ~78 MB core) |
-| 📦 **Binary** | ~25 MB (x86_64) |
-| 💽 **Disk** | ~40 MB (25 MB binary + ~15 MB config/cache) |
-| ⚡ **CPU** | Any x86_64 processor (~1% idle, ~5% during inference) |
-| 📜 **License** | Proprietary |
+| 🖥️ **OS** | Linux (x86_64), Windows (x64), Raspberry Pi / ARM64 Linux |
+| 🧠 **RAM** | ~80 MB (proceso: ~2 MB CLI + ~78 MB core) |
+| 📦 **Binary** | ~17–20 MB (varía por plataforma) |
+| 💽 **Disk** | ~40 MB (binario + ~15 MB config/cache) |
+| ⚡ **CPU** | Cualquier x86_64, x64 o ARM64 (~1% idle, ~5% inferencia) |
+| 🖥️ **Terminal** | Cualquiera con Unicode o ASCII (auto-detectado) |
+| 📜 **License** | Propietaria |
+
+## 💾 Modo Portable — llévalo a TODOS lados
+
+Corre PyCode desde un USB o disco portable:
+
+### Activación
+Crea un archivo vacío `portable.txt` al lado del binario `pycode`:
+```
+/media/usb/pycode/
+├── pycode              # binary
+├── portable.txt        # marker file (activates portable mode)
+└── pycodata/           # created automatically
+    ├── config.json     # theme settings
+    ├── sessions/       # all session files
+    ├── prompt-history.jsonl  # input history
+    └── models-dev.json  # model catalog cache
+```
+
+### Prioridad
+1. `PYCODE_DATA_DIR` env var (override explícito)
+2. Portable mode (`portable.txt`)
+3. Standard: `~/.config/pycode-tui/`
+
+### Notas
+- Prompts (`prompts/`) van dentro del binario (solo lectura)
+- Todos tus datos viajan en `pycodata/`
+- Sin auto-detección de discos extraíbles; requiere el marker `portable.txt`
 
 ---
 
-## 📜 License
+## 📜 Licencia
 
-**PyCode is a closed-source, proprietary application.** It is distributed as a ready-to-run binary and is free to use, but the source code is not published and may not be redistributed or modified.
+**PyCode es una aplicación propietaria cerrada.** Se distribuye como binario listo para usar y es gratis, pero el código fuente no se publica ni puede redistribuirse o modificarse.
 
 ---
 
-## 🙏 Credits
+## 🙏 Créditos
 
 Inspired by AI-powered coding assistants for the terminal.
 
 ---
 
-## 📞 Contact
+## 📞 Contacto
 
 | Channel | Link |
 |---------|------|
