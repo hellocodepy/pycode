@@ -4,7 +4,7 @@
 
 ### AI-powered coding assistant in your terminal
 
-**Chat with LLMs, run tools, and write code — all without leaving your command line.**
+**Chat with AI, run tools, and write code — all without leaving your command line.**
 
 [![Website](https://img.shields.io/badge/Website-pycode.kozow.com-6366f1)](https://pycode.kozow.com/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-@hellocodelinux-25D366)](https://wa.me/5491112345678)
@@ -52,10 +52,13 @@ Lightweight • Beautiful • Powerful • Free
 |---------|-------------|
 | Build / Plan / Chat Modes | Full access, read-only, or web-only — switch with `Ctrl+B`. |
 | Chat Sessions | Persistent conversations. Revisit, rename, or delete anytime. |
-| Context Compaction | Auto-summarizes when full. You never lose what matters. |
-| Theme Picker | Multiple built-in themes, switch live with `Ctrl+P`. |
+| Context Compaction | Auto-summarizes long conversations. You never lose what matters. |
+| Theme Picker | Multiple built-in themes, switch live with `Ctrl+P` or `Ctrl+T`. |
 | Model Picker | Fetch and switch models on the fly with `Ctrl+O`. |
-| Custom Provider Support | Connect your own OpenAI-compatible endpoint + access key with `Ctrl+U` or `/provider`. Use local models, private proxies, or any compatible service. |
+| Custom Provider Support | Connect your own AI provider with `Ctrl+U` or `/provider`. Use local models, private proxies, or any compatible service. |
+| Automatic Titles | Sessions get smart, AI-generated titles based on your first message. |
+| Message Queue | Type while the AI is thinking — your messages are queued and sent in order. |
+| Language Detection | Always responds in your language, automatically. |
 
 ### Tools that DO the work
 
@@ -67,37 +70,39 @@ Lightweight • Beautiful • Powerful • Free
 | edit | Edit with exact string replacement |
 | glob | Find files by glob pattern |
 | grep | Search file contents with regex |
-| apply_patch | Apply aider-style patches |
+| apply_patch | Apply code patches |
 | webfetch | Fetch and extract text from a URL |
 | websearch | Search the web for current info |
 | todowrite | Structured task list |
-| question | Multiple-choice question to the user |
+| question | Multiple-choice questions |
 | memory | Retrieve context from past sessions |
 | task | Spawn sub-agents for delegated work |
-| set_title | Auto-generated session title |
+| set_title | Set a custom session title |
 | codeview | Render code snippets with syntax highlighting |
 
 ### An experience that HOOKS you
 
 | Feature | Description |
 |---------|-------------|
-| Beautiful TUI | Powered by [Textual](https://textual.textualize.io/). Rich colors, responsive. |
+| Beautiful TUI | Rich colors, responsive, and easy on the eyes. |
 | Context Usage Bar | Real-time token usage in the status bar. |
-| Reasoning Display | See the model's "thinking" with elapsed time. |
+| Reasoning Display | See the AI's "thinking" with elapsed time. |
 | Diff Rendering | Colored diffs for `apply_patch` results. |
 | Persistent History | Your prompts are saved and recalled with Up/Down arrows. |
 | Help Screen | Keyboard shortcuts on 2 pages (`F1`). |
-| Copy Messages | Copy responses via `/copy` (OSC 52, works in web). |
+| Copy Messages | Copy responses via `/copy`. |
 | Mouse Selection | Toggle with `Ctrl+S` or `/select`. |
 | Error Dialogs | Friendly handling for rate limits, auth, server errors. |
 | Session Memory | The `memory` tool retrieves snippets from past chats. |
+| File References | Mention files with `@path` to reference them in your messages. |
+| Shell Commands | Run shell commands directly with `!command`. |
 
 ### Agents ready for anything
 
 | Agent | Type | Description |
 |-------|------|-------------|
 | `build` | Primary | Default agent — full tool access. |
-| `plan` | Primary | Read-only — great for analysis. |
+| `plan` | Primary | Read-only — great for analysis and planning. |
 | `explore` | Subagent | Fast codebase exploration. |
 | `general` | Subagent | Research and multi-step execution. |
 
@@ -105,23 +110,21 @@ Lightweight • Beautiful • Powerful • Free
 
 | Feature | Description |
 |---------|-------------|
-| Web Browser Mode | `pycode web` serves the TUI in your browser via [textual-serve](https://github.com/Textualize/textual-serve). |
+| Web Browser Mode | `pycode web` serves the TUI in your browser. |
 | CLI Subcommands | `pycode`, `pycode web`, `pycode run TEXT`, `pycode help`. |
 | Session Resume | `pycode -s SESSION_ID` picks up where you left off. |
 | Auto Update Check | `pycode help` shows an update notice if a newer version exists. |
-| models.dev Integration | Real context windows from the catalog. |
+| Accurate context windows | Real per-model context limits, kept current automatically. |
 | Proxy Support | Respects `HTTPS_PROXY` / `HTTP_PROXY` / `ALL_PROXY` and `NO_PROXY`. |
-| Message Queue | Type while it processes — queued automatically. |
 | Non-blocking Tools | All tools run in background threads. UI stays responsive. |
-| File References | Reference files with `@path` or `/file`. |
-| Shell Integration | Run inline with `!command` or `/shell command`. |
 | Slash Commands | Type `/` for the filterable commands menu. |
+| Automatic Retries | Silently retries on transient errors (up to 3 times). |
 
 ---
 
 ## FREE MODELS — NO KEY REQUIRED
 
-**Works out of the box.** PyCode ships with a built-in free provider offering **6 free models**, automatically detected and switchable on the fly with `Ctrl+O`. The default model is `mimo-v2.5`.
+**Works out of the box.** PyCode includes **6 free models**, automatically detected and switchable on the fly with `Ctrl+O`. The default model is `mimo-v2.5`.
 
 | Model | Description |
 |-------|-------------|
@@ -132,7 +135,7 @@ Lightweight • Beautiful • Powerful • Free
 | nemotron-3.5-lightning | Lightning-fast |
 | laguna-s-2.1 | Lightweight and fast |
 
-**Want your own models?** Add a custom OpenAI-compatible provider (`Ctrl+U` or `/provider`) and use local LLMs (Ollama, LM Studio), private proxies, or any compatible service.
+**Want your own models?** Add a custom AI provider (`Ctrl+U` or `/provider`) and use local models, private proxies, or any compatible service.
 
 ---
 
@@ -177,6 +180,8 @@ curl -L https://pycode.kozow.com/bin/win64/pycode.exe -o pycode.exe
 | Terminal | Any terminal with Unicode or ASCII support (auto-detected) |
 | License | Proprietary |
 
+---
+
 ## Portable Mode — take it EVERYWHERE
 
 Run PyCode from a USB drive or portable disk:
@@ -191,7 +196,7 @@ Create an empty file named `portable.txt` next to the `pycode` binary:
     ├── config.json     # theme settings
     ├── sessions/       # all session files
     ├── prompt-history.jsonl  # input history
-    └── models-dev.json  # model catalog cache
+    └── models cache  # cached model catalog
 ```
 
 ### Priority
@@ -208,27 +213,24 @@ Create an empty file named `portable.txt` next to the `pycode` binary:
 
 ## Notable facts about PyCode
 
-Technical and design details verified in the project source code:
-
 | Fact | Detail |
 |------|--------|
-| Current version | `1.6.0` (defined in `__version__.py`; `pycode help` warns if a newer version exists at `pycode.kozow.com/version.txt`). |
-| Creator / author | Eduardo Castillo (`lu9dce@gmx.com`), a.k.a. **hElLocoDeLinux**. |
-| Default provider | Free public endpoint with `public` key — **no key or sign-up required**. Can be changed at runtime (`Ctrl+U` or `/provider`). |
-| Available models | PyCode automatically detects the **6 free models** offered by the built-in provider (no key): `deepseek-v4-flash`, `mimo-v2.5`, `hy3`, `nemotron-3-ultra`, `nemotron-3.5-lightning`, `laguna-s-2.1`. Default model is `mimo-v2.5`. |
-| Operation modes | `build` (full access), `plan` (read-only), `chat` (web only: `webfetch` + `websearch`). Switch with `Ctrl+B` or `/mode`. |
-| Agents | Primary: `build`, `plan`. Sub-agents: `explore`, `general` (spawned via the `task` tool). Hidden/automatic: `title`, `compaction`. |
-| Tools | 15 in total: `bash`, `read`, `write`, `edit`, `glob`, `grep`, `apply_patch`, `webfetch`, `websearch`, `todowrite`, `question`, `memory`, `task`, `set_title`, `codeview`. |
-| Context compaction | Automatic summary when the context window fills up. Overflow detection with ~30 error patterns and retry with reduced context. |
-| models.dev catalog | Real per-model context windows, with a 7-day local cache (`models-dev.json`). Fallback: 1,000,000 tokens. |
-| Retries | **Fixed** backoff of 2 s (max 30 s), up to 3 attempts, for 5xx, 429, 408/409/425 and transport errors. |
-| Proxy support | Respects `HTTP_PROXY` / `HTTPS_PROXY` / `ALL_PROXY` and `NO_PROXY`. The proxy is NOT applied to local/private hosts nor to the catalog query. |
-| TUI | Built with [Textual](https://textual.textualize.io/) + [Rich](https://rich.readthedocs.io/). Color depth auto-detected (truecolor/256/16). |
-| Web mode | `pycode web` serves the TUI in the browser via [textual-serve](https://github.com/Textualize/textual-serve) (default port `10365`). |
-| Language | PyCode **always responds in the user's language** (fixed instruction in the system prompt). |
-| Build | Packaged as a single binary with [PyInstaller](https://pyinstaller.org/) (see `pycode.spec`). Cross-platform: Linux x86_64, Windows x64 and ARM64 (Raspberry Pi). |
-| Secure config | `config.json` is written with `0600` permissions (read/write for the user only). |
-| License | Proprietary / closed (the binary is free but the source code is not published). |
+| Current version | `1.6.4`. The app notifies you when a newer version is available. |
+| Creator | Eduardo Castillo (`lu9dce@gmx.com`), a.k.a. **hElLocoDeLinux**. |
+| Built-in provider | A free provider is included — no key or sign-up required. Switch anytime with `Ctrl+U` or `/provider`. |
+| Available models | `deepseek-v4-flash`, `mimo-v2.5`, `hy3`, `nemotron-3-ultra`, `nemotron-3.5-lightning`, `laguna-s-2.1`. Default is `mimo-v2.5`. |
+| Operation modes | `build` (full access), `plan` (read-only), `chat` (web only). Switch with `Ctrl+B` or `/mode`. |
+| Agents | Two primary agents (`build`, `plan`) plus specialized sub-agents (`explore`, `general`) for delegated work. |
+| Context handling | Automatic summarization when the conversation gets long, with smart overflow handling so you never lose context. |
+| Context windows | Accurate per-model context windows, kept up to date automatically. |
+| Reliability | Automatic retries with backoff on transient server errors. |
+| Proxy support | Works behind corporate proxies (respects standard proxy settings). |
+| Adaptive UI | Beautiful terminal interface that adapts its colors to your terminal's capabilities. |
+| Web mode | Run the interface in your browser and access it from any device on the network. |
+| Language | Always responds in the user's language. |
+| Cross-platform | A single self-contained binary for Linux x86_64, Windows x64 and ARM64 (Raspberry Pi). |
+| Privacy | Your sessions, history and settings are stored locally on your machine. |
+| License | Proprietary / closed (free to use, source not published). |
 
 ### Keyboard shortcuts
 
@@ -237,14 +239,18 @@ Technical and design details verified in the project source code:
 | `Ctrl+B` | Switch mode (build / plan / chat) |
 | `Ctrl+P` / `Ctrl+T` | Select theme |
 | `Ctrl+O` | Select model |
-| `Ctrl+U` | Configure provider (endpoint + key) |
+| `Ctrl+U` | Configure provider (URL + key) |
 | `Ctrl+S` | Toggle mouse selection |
 | `Ctrl+R` | Manage sessions |
 | `Ctrl+N` | New session |
 | `Ctrl+L` | Clear chat |
-| `Ctrl+C` | Copy (overrides Textual's default binding) |
+| `Ctrl+C` | Copy (overrides the default terminal binding) |
+| `Ctrl+Q` | Quit |
 | `Esc` | Stop / cancel |
 | `F1` | Help screen (shortcuts + slash commands) |
+| `PageUp` | Scroll up |
+| `PageDown` | Scroll down |
+| `↑` / `↓` | Navigate prompt history |
 
 ### Slash commands
 
@@ -252,9 +258,15 @@ Technical and design details verified in the project source code:
 
 ---
 
+## Alternatives
+
+PyCode replaces: Claude Code · Aider · Gemini CLI · Codex CLI · Goose · Amazon Q Developer CLI
+
+---
+
 ## License
 
-**PyCode is a closed-source, proprietary application.** It is distributed as a ready-to-run binary and is free to use, but the source code is not published and may not be redistributed or modified.
+**PyCode is a proprietary, closed-source application.** It is distributed as a ready-to-run binary, is free to use, but may not be redistributed or modified.
 
 ---
 
